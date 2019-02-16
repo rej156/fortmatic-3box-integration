@@ -1,12 +1,12 @@
 import React from "react";
-import Box from "3box";
+import Box from "../3box-js/lib/3box";
 import Web3 from "web3";
 import Fortmatic from "fortmatic";
 
 const handleClickFM = async () => {
   // Request user login if needed, returns current user account address
   // try {
-  const fm = new Fortmatic("pk_live_92AE9A2BEA56798C");
+  const fm = new Fortmatic("APIKEYGOESHERE");
   const fmProvider = fm.getProvider();
   window.fmProvider = fmProvider;
   window.web3 = new Web3(fmProvider);
@@ -33,7 +33,7 @@ const handleClickThreeBox = async () => {
   }
 };
 
-const Component: React.FunctionComponent<{}> = () => (
+const Component = () => (
   <div>
     <p onClick={handleClickFM}>fortmatic</p>
     <p onClick={handleClickThreeBox}>3box</p>
